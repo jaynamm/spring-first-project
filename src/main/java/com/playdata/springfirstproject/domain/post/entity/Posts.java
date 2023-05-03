@@ -1,5 +1,6 @@
 package com.playdata.springfirstproject.domain.post.entity;
 
+import com.playdata.springfirstproject.global.domain.AuditingEntity;
 import jakarta.persistence.*;
 import lombok.Builder;
 import lombok.Getter;
@@ -8,7 +9,7 @@ import lombok.NoArgsConstructor;
 @Getter
 @NoArgsConstructor
 @Entity
-public class Posts {
+public class Posts extends AuditingEntity {
     @Id // 테이블의 PK 를 의미한다.
     @GeneratedValue(strategy = GenerationType.IDENTITY) // auto increment
     private Long id; // Long => bigint type
