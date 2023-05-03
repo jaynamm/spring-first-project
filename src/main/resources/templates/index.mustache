@@ -1,0 +1,32 @@
+{{>layout/header}}
+    <h1>스프링부트로 머스태치 써봄</h1>
+    <div class="container">
+        <div class="col-md-12">
+            <div class="row">
+                <div class="col-md-6">
+                    <a href="/posts/write" role="button" class="btn btn-primary">글 등록</a>
+                </div>
+            </div>
+            <br>
+            <!-- 게시글 -->
+            <table class="table table-horizontal table bordered">
+                <thead class="thead-dark"->
+                    <th scope="col">글 번호</th>
+                    <th scope="col">제목</th>
+                    <th scope="col">작성자</th>
+                    <th scope="col">작성일</th>
+                </thead>
+                <tbody id="tbody">
+                    {{#posts}}
+                        <tr>
+                            <td>{{ id }}</td>
+                            <td><a href="/posts/{{ id }}">{{ title }}</td>
+                            <td>{{ author }}</td>
+                            <td>{{ createdDate }}</td>
+                        </tr>
+                    {{/posts}}
+                </tbody>
+            </table>
+        </div>
+    </div>
+{{>layout/footer}}

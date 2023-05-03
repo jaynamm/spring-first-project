@@ -13,6 +13,7 @@ import java.time.LocalDateTime;
 @MappedSuperclass // 엔티티클래스에서 공통적으로 사용하는 필드나 메소드를 추상화하여 정의
 @EntityListeners(AuditingEntityListener.class)
 public abstract class AuditingEntity {
+
     @CreatedDate
     private LocalDateTime createdDate;
 
