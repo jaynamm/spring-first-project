@@ -4,10 +4,10 @@ const main = {
         const btnSave = document.querySelector("#btn-save");
         if(btnSave) btnSave.addEventListener("click", () => this.save());
 
-        cont btnUpdate = document.querySelector("#btn-update");
+        const btnUpdate = document.querySelector("#btn-update");
         if(btnUpdate) btnUpdate.addEventListener("click", () => this.update());
 
-        cont btnDelete = document.querySelector("#btn-delete");
+        const btnDelete = document.querySelector("#btn-delete");
         if(btnDelete) btnDelete.addEventListener("click", () => this.delete());
     },
 
@@ -54,7 +54,7 @@ const main = {
 
         // fetch API 이용해서 POST 로 요청을 보내고 그 결과를 처리
         fetch(`/api/v1/posts/${id}`, {
-            method: "post",
+            method: "put",
             headers: {
                 "content-Type": "application/json;charset=utf-8"
             },

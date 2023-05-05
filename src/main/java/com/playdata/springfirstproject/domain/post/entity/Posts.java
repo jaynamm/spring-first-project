@@ -20,7 +20,6 @@ public class Posts extends AuditingEntity {
     @Column(columnDefinition = "TEXT", nullable = false)
     private String content;
 
-    @Column
     private String author;
 
     @Builder
@@ -28,5 +27,10 @@ public class Posts extends AuditingEntity {
         this.title = title;
         this.content = content;
         this.author = author;
+    }
+
+    public void update(String title, String content) {
+        this.title = title;
+        this.content = content;
     }
 }
